@@ -6,9 +6,9 @@ app = Flask(__name__)
 # Ganti ini dengan info database MySQL AWS kamu
 db = pymysql.connect(
     host="ppib-mysql8.cvp0g1n8cmrx.ap-southeast-1.rds.amazonaws.com",
-    user="db_aset_logistik",
-    password="lb9aMpLHx1",
-    database="db_aset_logistik"
+    user="",
+    password="",
+    database=""
 )
 
 @app.route('/')
