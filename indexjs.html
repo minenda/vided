@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Editor Sederhana</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+    video {
+      max-width: 100%;
+      margin-top: 10px;
+    }
+    input[type="number"] {
+      width: 60px;
+    }
+    button {
+      padding: 6px 12px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎬 Video Editor - Potong Video</h1>
+
+  <input type="file" id="videoInput" accept="video/*">
+  <br>
+  <video id="videoPlayer" controls></video>
+
+  <div>
+    <p>
+      <label>Mulai (detik): <input type="number" id="startTime" value="0"></label>
+      <label>Akhir (detik): <input type="number" id="endTime" value="10"></label>
+    </p>
+    <button id="cutBtn">Potong Video</button>
+  </div>
+
+  <!-- FFmpeg WebAssembly -->
+  <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.6/dist/ffmpeg.min.js"></script>
+
+  <!-- Script utama -->
+  <script src="script.js"></script>
+
+</body>
+</html>
